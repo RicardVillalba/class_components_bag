@@ -1,9 +1,29 @@
+.layout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container{
+  max-width: 1200px;
+}
+
+.title {
+  padding: 20px 0 5px 5px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .products {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 600px;
+  height: 550px;
   padding: 0 50px;
+  max-width: 1200px;
 }
 
 .product {
@@ -14,6 +34,7 @@
   height: 100%;
   width: auto;
   min-width: 33%;
+  padding: 0 3px;
 }
 
 .imgContainer {
@@ -29,5 +50,18 @@
 }
 
 h3, p {
-  margin: 5px;
+  margin: 3px 0;
+  font-size: 10px;
+}
+
+.addBtn{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

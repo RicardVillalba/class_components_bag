@@ -1,9 +1,10 @@
 import { Component } from "react";
+import Button from "./Button";
 import '../App.css';
 
 class Product extends Component {
     render() {
-        const { product } = this.props
+        const { product, addToTheBag } = this.props
         return(
             <div className="product" >
                 <div className="imgContainer">
@@ -11,6 +12,9 @@ class Product extends Component {
                 </div>
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
+                <Button
+                onClick={() => addToTheBag(product)}
+                />
             </div>
         )
     }
