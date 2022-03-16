@@ -1,15 +1,33 @@
-.layout{
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: relative;
+  padding: 0 50px;
+  box-shadow: 0 2px 3px rgb(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.layout {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.container{
+.container {
   max-width: 1200px;
 }
 
 .title {
-  padding: 20px 0 5px 5px;
+  padding: 20px 50px;
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -49,12 +67,13 @@
   object-fit: cover;
 }
 
-h3, p {
+h3,
+p {
   margin: 3px 0;
   font-size: 10px;
 }
 
-.addBtn{
+.addBtn {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
