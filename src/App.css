@@ -73,14 +73,27 @@ p {
   font-size: 10px;
 }
 
-.addBtn {
+.addBtn,
+.bagBtn {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 10px 3px 10px 15px;
   border: none;
   background-color: black;
   color: white;
   cursor: pointer;
+}
+.bagBtn {
+  font-weight: 200;
+  background-color: transparent;
+  color: black;
+}
+
+.bubble {
+  font-size: 10px;
+  font-weight: 200;
+  padding: 0;
+  vertical-align: middle;
 }
