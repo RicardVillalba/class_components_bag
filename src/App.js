@@ -12,18 +12,40 @@ class App extends Component {
         {name: 'outfit 1', price: 100, img:'/products/IMG_1694.JPG'},
         {name: 'outfit 2', price: 130, img:'/products/IMG_1695.JPG'},
         {name: 'outfit 3', price: 180, img:'/products/IMG_1696.JPG'}
-      ]
-    
+      ],
+    bag: [
+      //{name: 'outfit 1', price: 100, img:'/products/IMG_1694.JPG', quantity: 1}
+    ]
+  }
+
+  addToTheBag = (product) => {
+    const { bag } = this.state
+    if(bag.find(x => x.name === product.name)){
+      const newBag = bag.map(x => x.name === product.name
+      ? ({
+       ...x,
+       quantity: x.quantity + 1 
+      })
+      :x)
+      return this.setState({bag: newBag})
+    }
+    return this.setState({
+      bag: this.state.bag.concat({
+        ...product,
+        quantity: 1,
+      })
+    })
   }
 
   render() {
+    console.log(this.state.bag);
     return(
       <div>
         <Navbar/>
         <Layout>
         <Title/>
         <Products
-        addToTheBag={() => console.log('adding to the bag')}
+        addToTheBag={this.addToTheBag}
         products ={this.state.products}
         />
         </Layout>
