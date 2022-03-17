@@ -13,9 +13,7 @@ class App extends Component {
         {name: 'outfit 2', price: 130, img:'/products/IMG_1695.JPG'},
         {name: 'outfit 3', price: 180, img:'/products/IMG_1696.JPG'}
       ],
-    bag: [
-      //{name: 'outfit 1', price: 100, img:'/products/IMG_1694.JPG', quantity: 1}
-    ]
+    bag: []
   }
 
   addToTheBag = (product) => {
@@ -38,10 +36,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.bag);
     return(
       <div>
-        <Navbar/>
+        <Navbar bag={this.state.bag}/>
         <Layout>
         <Title/>
         <Products
