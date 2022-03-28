@@ -6,7 +6,7 @@ class Navbar extends Component {
     render(){
         const { bag } = this.props
         return(
-            <nav className="nav">
+            <nav className="nav"> 
                 <Logo/>
                 <Bag bag={bag} />
             </nav>

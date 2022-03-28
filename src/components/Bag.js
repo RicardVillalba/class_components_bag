@@ -1,5 +1,6 @@
 import { Component } from "react";
 import BubbleAlert from "./BubbleAlert";
+import CardDetails from "./CardDetails";
 import '../App.css'
 
 
@@ -13,6 +14,7 @@ class Bag extends Component {
                 <span className="bubble">
                     {quantity !== 0 ? <BubbleAlert value={quantity} /> : null}
                 </span>
+                <CardDetails bag={bag} />
             </div>
         )
     }
