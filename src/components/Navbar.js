@@ -1,17 +1,17 @@
 import { Component } from "react";
-import Logo from './Logo'
-import Bag from './Bag'
-import '../App.css'
+import Logo from "./Logo";
+import Bag from "./Bag";
+import "../App.css";
 class Navbar extends Component {
-    render(){
-        const { bag } = this.props
-        return(
-            <nav className="nav"> 
-                <Logo/>
-                <Bag bag={bag} />
-            </nav>
-        )
-    }
+  render() {
+    const { bag, bagVisible, showBag } = this.props;
+    return (
+      <nav className="nav">
+        <Logo />
+        <Bag bag={bag} bagVisible={bagVisible} showBag={showBag} />
+      </nav>
+    );
+  }
 }
 
-export default Navbar
+export default Navbar;
